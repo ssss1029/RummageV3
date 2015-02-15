@@ -11,13 +11,10 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
-
-
-
-
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,21 +48,13 @@
 	    </div>
 	    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 	    	<div class="list-group">
-			  <input class="list-group-item" placeholder="Search services...">
+			  <input class="list-group-item" id="filter_services" placeholder="Search services...">
 			</div>
-		    <div class="panel-body">
+		    <div class="panel-body" id="services">
 				<button type="button" id="googlebutton" data-toggle="popover" title="Login" data-content="xx" class="btn btn-google-plus btn-block"><i class="fa fa-google"></i> Google Drive</button>
-					<div id="dialog-login">
-						<form class="form-container">
-							<div class="form-title"><h2>Sign In</h2></div>
-							<div class="form-title">Username</div>
-							<input class="form-field" type="text" name="firstname" /><br />
-							<div class="form-title">Password</div>
-							<input class="form-field" type="text" name="email" /><br />
-						</form>
-					</div>
 				<button type="button" class="btn btn-dropbox btn-block"><i class="fa fa-dropbox"></i> Dropbox</button>
 				<button type="button" class="btn btn-github btn-block"><i class="fa fa-git"></i> Github</button>
+				<button type="button" id ="boxbutton" class="btn btn-box btn-block"><i class="fa fa-dropbox"></i> Box</button>
 			</div>
 	    </div>
 	  </div>
@@ -79,14 +68,22 @@
 	    </div>
 	    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 	    	<div class="list-group">
-			  <input class="list-group-item" placeholder="Search accounts...">
+			  <input class="list-group-item" id="filter_accounts"placeholder="Search accounts...">
 			</div>
-		    <div class="panel-body">
-				<div class="alert btn-google-plus alert-dismissible" role="alert">
-				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				  <strong><i class="fa fa-google"></i> Google Drive</strong>
+		    <div class="panel-body" id="accounts">
+				<div class="alert alert-warning alert-dismissible btn-google-plus" id="closeGoogle" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				  	<strong>Google</strong> 
+				</div><div class="alert alert-warning alert-dismissible" id="closeGithub" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				  	<strong>GitHub</strong>
+				</div><div class="alert alert-warning alert-dismissible" id="closeDropbox" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				  	<strong>Dropbox</strong>
+				</div><div class="alert alert-warning alert-dismissible" id="closeBox" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				  	<strong>Box</strong>
 				</div>
-
 			</div>
 
 	    </div>
@@ -111,9 +108,10 @@
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/ui.js"></script>
 
-	<script src="js/myjs.js" />
+	<script src="js/myjs.js"></script>
+
 
   </body>
 </html>

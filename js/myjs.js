@@ -1,13 +1,5 @@
-$(document).ready(function() {
-    		$("#googlebutton").click(function() {
-	    		$( "#dialog-login" ).dialog({
-			      	modal: true,
-			      	buttons: {
-			        	Ok: function() {
-			        		
-			          		$( this ).dialog( "close" );
-			        	}
-			      	}
-			    });
-			}); 
-    	});
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+
+      sendResponse({farewell: request.greeting + "!"});
+});
